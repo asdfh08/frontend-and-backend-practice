@@ -7,40 +7,43 @@
     <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
-    <div id="header">
-        <h1>Товары</h1>
-    </div>
-    
-    <div id="menu">
-        <ul>
-            <li><a href="../index.html">Главная</a></li>
-            <li><a href="news.html">Новости</a></li>
-            <li><a href="practices.html">Практики</a></li>
-            <li><a href="goods.html">Товары</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-    </div>
-    
-    <div id="content">
-        <div>
-            <img src="../images/goods1.jpg" alt="Товар 1" width="150" height="150">
-            <p>Букет Гортензий</p>
-            <p>Цена: 4500 руб.</p>
+    <div class="page-container">
+        <div class="header">Товары</div>
+        
+        <div class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            </ul>
         </div>
-        <div>
-            <img src="../images/goods2.jpg" alt="Товар 2" width="150" height="150">
-            <p>Букет Роз</p>
-            <p>Цена: 7500 руб.</p>
+        
+        <div class="content">
+            <h2 class="section-title">Наши товары</h2>
+            <div class="goods-container">
+                <div class="goods-card">
+                    <img class="goods-image" src="../images/goods1.jpg" alt="Букет Гортензий">
+                    <h3 class="goods-name">Букет Гортензий</h3>
+                    <p class="goods-price">Цена: 4500 руб.</p>
+                </div>
+                
+                <div class="goods-card">
+                    <img class="goods-image" src="../images/goods2.jpg" alt="Букет Роз">
+                    <h3 class="goods-name">Букет Роз</h3>
+                    <p class="goods-price">Цена: 7500 руб.</p>
+                </div>
+                
+                <div class="goods-card">
+                    <img class="goods-image" src="../images/goods3.jpg" alt="Букет Эустом">
+                    <h3 class="goods-name">Букет Эустом</h3>
+                    <p class="goods-price">Цена: 5600 руб.</p>
+                </div>
+            </div>
         </div>
-        <div>
-            <img src="../images/goods3.jpg" alt="Товар 3" width="150" height="150">
-            <p>Букет Эустом</p>
-            <p>Цена: 5600 руб.</p>
-        </div>
-    </div>
-    
-    <div id="footer">
-        <p>© 2024 Все права защищены</p>
+        
+        <div class="footer">© 2024 Конкина Е.А. Все права защищены.</div>
     </div>
 </body>
 </html>
