@@ -7,7 +7,7 @@ body {
     min-height: 100vh; /* Минимальная высота равна высоте окна браузера */
 }
 
-/* ==== КОНТЕЙНЕР СТРАНИЦЫ ==== */
+
 .page-container {
     max-width: 1200px; /* Максимальная ширина контента */
     margin: 0 auto; /* Центрирование контейнера по горизонтали */
@@ -16,7 +16,7 @@ body {
     box-shadow: 0 0 30px rgba(0,0,0,0.1); /* Легкая тень вокруг всего контента */
 }
 
-/* ==== ШАПКА ==== */
+
 .header {
     background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); /* Темный градиентный фон */
     color: white; /* Белый цвет текста */
@@ -27,7 +27,7 @@ body {
     letter-spacing: 2px; /* Расстояние между буквами */
 }
 
-/* ==== НАВИГАЦИЯ ==== */
+
 .nav {
     background: #2c3e50; /* Темно-синий фон навигации */
     padding: 20px 0; /* Вертикальные отступы */
@@ -60,14 +60,14 @@ body {
     transform: translateY(-2px); /* Легкое поднятие элемента при наведении */
 }
 
-/* ==== ОСНОВНОЙ КОНТЕНТ ==== */
+
 .content {
     padding: 40px; /* Внутренние отступы контента */
     max-width: 900px; /* Максимальная ширина контента */
     margin: 0 auto; /* Центрирование контента */
 }
 
-/* ==== ГЛАВНАЯ СТРАНИЦА ==== */
+
 .profile-header {
     text-align: center; /* Выравнивание по центру */
     margin-bottom: 40px; /* Отступ снизу */
@@ -113,7 +113,7 @@ body {
     line-height: 1.8; /* Межстрочный интервал */
 }
 
-/* ==== НАВЫКИ ==== */
+
 .skills-container {
     display: flex; /* Горизонтальное расположение навыков */
     justify-content: center; /* Выравнивание по центру */
@@ -138,7 +138,7 @@ body {
     box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4); /* Увеличение тени при наведении */
 }
 
-/* ==== ОПЫТ РАБОТЫ ==== */
+
 .experience-section {
     margin-top: 50px; /* Отступ сверху */
 }
@@ -178,11 +178,129 @@ body {
     margin: 0; /* Убираем отступы */
 }
 
-/* ==== ФУТЕР ==== */
+
 .footer {
     background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); /* Темный градиентный фон */
     color: white; /* Белый цвет текста */
     text-align: center; /* Выравнивание по центру */
     padding: 30px; /* Внутренние отступы */
     margin-top: 50px; /* Отступ сверху */
+}
+
+/* ==== СТИЛИ ДЛЯ НОВОСТЕЙ ==== */
+.news-container {
+    display: flex; /* Горизонтальное расположение новостей */
+    flex-direction: column; /* Вертикальное направление элементов */
+    gap: 30px; /* Расстояние между новостями */
+}
+
+.news-card {
+    background: white; /* Белый фон карточки */
+    padding: 25px; /* Внутренние отступы */
+    border-radius: 12px; /* Скругленные углы */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08); /* Легкая тень */
+    border-left: 4px solid #667eea; /* Синяя полоса слева */
+    transition: transform 0.3s ease; /* Плавная анимация трансформации */
+}
+
+.news-card:hover {
+    transform: translateX(5px); /* Сдвиг вправо при наведении */
+}
+
+.news-title {
+    font-size: 22px; /* Размер шрифта заголовка новости */
+    color: #2c3e50; /* Темно-синий цвет текста */
+    margin: 0 0 10px 0; /* Отступ снизу */
+    font-weight: 600; /* Жирный шрифт */
+}
+
+.news-meta {
+    color: #7f8c8d; /* Серый цвет текста */
+    font-size: 14px; /* Размер шрифта мета-информации */
+    margin: 0 0 15px 0; /* Отступ снизу */
+}
+
+.news-text {
+    color: #2c3e50; /* Темно-синий цвет текста */
+    line-height: 1.6; /* Межстрочный интервал */
+    margin: 0; /* Убираем отступы */
+}
+
+/* ==== СТИЛИ ДЛЯ ТОВАРОВ ==== */
+.goods-container {
+    display: flex; /* Горизонтальное расположение товаров */
+    justify-content: center; /* Выравнивание по центру */
+    flex-wrap: wrap; /* Перенос на новую строку при необходимости */
+    gap: 30px; /* Расстояние между товарами */
+    margin: 30px 0; /* Вертикальные отступы */
+}
+
+.goods-card {
+    background: white; /* Белый фон карточки */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 12px; /* Скругленные углы */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08); /* Легкая тень */
+    text-align: center; /* Выравнивание текста по центру */
+    transition: transform 0.3s ease; /* Плавная анимация трансформации */
+    max-width: 250px; /* Максимальная ширина карточки */
+}
+
+.goods-card:hover {
+    transform: translateY(-5px); /* Поднятие элемента при наведении */
+}
+
+.goods-image {
+    width: 150px; /* Фиксированная ширина изображения */
+    height: 150px; /* Фиксированная высота изображения */
+    border-radius: 8px; /* Скругленные углы изображения */
+    object-fit: cover; /* Обрезка изображения для сохранения пропорций */
+    margin-bottom: 15px; /* Отступ снизу */
+}
+
+.goods-name {
+    font-size: 18px; /* Размер шрифта названия товара */
+    color: #2c3e50; /* Темно-синий цвет текста */
+    margin: 0 0 10px 0; /* Отступ снизу */
+    font-weight: 600; /* Жирный шрифт */
+}
+
+.goods-price {
+    color: #667eea; /* Синий цвет цены */
+    font-size: 16px; /* Размер шрифта цены */
+    font-weight: 600; /* Жирный шрифт */
+    margin: 0; /* Убираем отступы */
+}
+
+/* ==== СТИЛИ ДЛЯ КОНТАКТОВ ==== */
+.contacts-container {
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+.contact-info {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); /* Светлый градиентный фон */
+    padding: 30px; /* Внутренние отступы */
+    border-radius: 15px; /* Скругленные углы */
+    margin-bottom: 30px; /* Отступ снизу */
+}
+
+.contact-item {
+    margin: 15px 0; /* Вертикальные отступы */
+}
+
+.contact-button {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); /* Голубой градиентный фон */
+    color: white; /* Белый цвет текста */
+    border: none; /* Убираем границу */
+    padding: 15px 40px; /* Внутренние отступы */
+    border-radius: 25px; /* Круглые углы (капсульная форма) */
+    font-size: 16px; /* Размер шрифта */
+    font-weight: 600; /* Жирный шрифт */
+    cursor: pointer; /* Курсор указателя при наведении */
+    transition: all 0.3s ease; /* Плавные анимации при изменении */
+    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3); /* Тень с голубым оттенком */
+}
+
+.contact-button:hover {
+    transform: translateY(-3px); /* Поднятие элемента при наведении */
+    box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4); /* Увеличение тени при наведении */
 }
