@@ -8,9 +8,11 @@
 </head>
 <body>
     <div class="page-container">
-        <div class="header">Главная страница</div>
+        <header class="header">
+            <h1>Главная страница</h1>
+        </header>
         
-        <div class="nav">
+        <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
                 <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
@@ -18,46 +20,54 @@
                 <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li>
                 <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
             </ul>
-        </div>
+        </nav>
         
-        <div class="content">
-            <div class="profile-header">
+        <main class="content">
+            <article class="profile-header">
                 <h1 class="profile-title">Информация об авторе</h1>
                 <img class="profile-photo" src="images/photo.jpg" alt="Фото автора">
                 <h2 class="profile-name">Конкина Екатерина Алексеевна</h2>
                 <p class="profile-group">ЭФБО-07-24</p>
                 <p class="profile-group">Дата рождения: 23.11.2006</p>
-            </div>
+            </article>
 
-            <div class="about-me">
-                <p>Обо мне: Я студентка, увлекаюсь программированием и веб-разработкой. Изучаю новые технологии и совершенствую свои навыки.</p>
-            </div>
+            <section class="about-me">
+                <h2>Обо мне</h2>
+                <p>Я студентка, увлекаюсь программированием и веб-разработкой. Изучаю новые технологии и совершенствую свои навыки.</p>
+            </section>
 
-            <div class="skills-container">
-                <div class="skill-tag">HTML</div>
-                <div class="skill-tag">Python</div>
-                <div class="skill-tag">JavaScript</div>
-                <div class="skill-tag">Веб-дизайн</div>
-            </div>
+            <section class="skills-container">
+                <h2>Мои навыки</h2>
+                <div class="skills-grid">
+                    <div class="skill-tag">HTML</div>
+                    <div class="skill-tag">Python</div>
+                    <div class="skill-tag">JavaScript</div>
+                    <div class="skill-tag">Веб-дизайн</div>
+                </div>
+            </section>
 
-            <div class="experience-section">
+            <section class="experience-section">
                 <h2 class="section-title">Мой опыт работы</h2>
-                <div class="experience-card">
-                    <h3 class="experience-title">Разработка учебных проектов.</h3>
-                    <p class="experience-desc"> Создавала веб-страницы и приложения.</p>
+                <div class="experience-grid">
+                    <article class="experience-card">
+                        <h3 class="experience-title">Разработка учебных проектов</h3>
+                        <p class="experience-desc">Создавала веб-страницы и приложения.</p>
+                    </article>
+                    <article class="experience-card">
+                        <h3 class="experience-title">Изучение фронтенд технологий</h3>
+                        <p class="experience-desc">Осваивала современные технологии и инструменты.</p>
+                    </article>
+                    <article class="experience-card">
+                        <h3 class="experience-title">Изучение веб-дизайна</h3>
+                        <p class="experience-desc">Осваивала принципы UI/UX и современные цветотипы.</p>
+                    </article>
                 </div>
-                <div class="experience-card">
-                    <h3 class="experience-title">Изучение фронтенд технологий.</h3>
-                    <p class="experience-desc">Осваивала современные технологии и инструменты.</p>
-                </div>
-                <div class="experience-card">
-                    <h3 class="experience-title">Изучение веб-дизайна и дизайна.</h3>
-                    <p class="experience-desc">Осваивала принципы UI/UX и современные цветотипы.</p>
-                </div>
-            </div>
-        </div>
+            </section>
+        </main>
         
-        <div class="footer">© 2024 Конкина Е.А. Все права защищены.</div>
+        <footer class="footer">
+            <p>© 2024 Конкина Е.А. Все права защищены.</p>
+        </footer>
     </div>
 </body>
 </html>
