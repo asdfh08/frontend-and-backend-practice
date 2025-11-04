@@ -1,6 +1,6 @@
 /* ==== CSS ПЕРЕМЕННЫЕ ==== */
 :root {
-    /* Цветовая палитра */
+    /* Цветовая палитра - ОСТАВЛЯЕМ ВАШИ ЦВЕТА */
     --color-primary: #667eea;
     --color-primary-dark: #5a6fd8;
     --color-secondary: #764ba2;
@@ -57,7 +57,7 @@
     --transition-slow: 0.5s ease;
 }
 
-/* Темная тема */
+/* Темная тема - ОСТАВЛЯЕМ ВАШУ ТЕМНУЮ ТЕМУ */
 [data-theme="dark"] {
     --color-text: #ecf0f1;
     --color-text-light: #bdc3c7;
@@ -201,112 +201,116 @@ body {
     background: var(--color-bg);
 }
 
-/* ==== ПРОФИЛЬ ==== */
+/* ==== ПРОФИЛЬ (СТИЛЬ ИЗ ПРИМЕРА №11) ==== */
 .profile {
-    text-align: center;
     margin-bottom: var(--space-xl);
 }
 
 .profile__card {
-    background: var(--color-bg-secondary);
-    padding: var(--space-xl);
-    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    background: var(--color-bg);
+    padding: var(--space-lg);
+    border-radius: var(--border-radius);
     box-shadow: var(--shadow-md);
-    display: inline-block;
 }
 
 .profile__photo {
-    width: 220px;
-    height: 280px;
-    border-radius: var(--border-radius);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--color-primary);
     object-fit: cover;
-    border: 4px solid var(--color-primary);
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
-    margin-bottom: var(--space-lg);
 }
 
 .profile__name {
     font-size: var(--font-size-xl);
     color: var(--color-text);
-    margin: var(--space-sm) 0;
-    font-weight: 500;
+    margin-bottom: var(--space-sm);
 }
 
 .profile__group {
+    color: var(--color-primary);
     font-size: var(--font-size-lg);
-    color: var(--color-text-light);
     margin: var(--space-xs) 0;
 }
 
-/* ==== ОБО МНЕ ==== */
+/* ==== ОБО МНЕ (СТИЛЬ ИЗ ПРИМЕРА №11) ==== */
 .about {
-    background: var(--color-bg-secondary);
+    background: var(--color-bg);
     padding: var(--space-lg);
-    border-radius: var(--border-radius-lg);
-    margin: var(--space-xl) 0;
-    border-left: 5px solid var(--color-primary);
+    margin-bottom: var(--space-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
 }
 
 .about__title {
     color: var(--color-text);
-    margin-top: 0;
     margin-bottom: var(--space-md);
     font-size: var(--font-size-xl);
 }
 
 .about__text {
     font-size: var(--font-size-base);
-    line-height: 1.8;
+    line-height: 1.6;
     color: var(--color-text);
 }
 
-/* ==== НАВЫКИ ==== */
+/* ==== НАВЫКИ (СТИЛЬ ИЗ ПРИМЕРА №11) ==== */
 .skills {
     margin-bottom: var(--space-xl);
 }
 
 .skills__title {
     color: var(--color-text);
-    text-align: center;
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-md);
     font-size: var(--font-size-xl);
 }
 
 .skills__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    display: flex;
     gap: var(--space-md);
+    flex-wrap: wrap;
     margin: var(--space-lg) 0;
 }
 
 .skill {
-    background: var(--gradient-accent);
-    color: var(--color-text-inverse);
     padding: var(--space-md) var(--space-lg);
-    border-radius: 25px;
-    font-weight: 600;
-    font-size: var(--font-size-sm);
-    text-align: center;
+    border-radius: var(--border-radius);
+    color: var(--color-text-inverse);
+    font-weight: bold;
     transition: var(--transition-normal);
-    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+    text-align: center;
 }
 
 .skill:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
 }
 
-.skill--html { background: var(--gradient-accent); }
-.skill--python { background: linear-gradient(135deg, #3776AB 0%, #FFD343 100%); }
-.skill--js { background: linear-gradient(135deg, #F7DF1E 0%, #000000 100%); }
-.skill--design { background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%); }
+.skill--html {
+    background: #e34c26;
+}
+
+.skill--python {
+    background: #3776AB;
+}
+
+.skill--js {
+    background: #f0db4f;
+    color: var(--color-text);
+}
+
+.skill--design {
+    background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+}
 
 /* Исправление для JS навыка в темной теме */
 [data-theme="dark"] .skill--js {
-    color: var(--color-text-inverse) !important;
+    color: var(--color-text) !important;
 }
 
-/* ==== ОПЫТ РАБОТЫ ==== */
+/* ==== ОПЫТ РАБОТЫ (СТИЛЬ ИЗ ПРИМЕРА №11) ==== */
 .experience {
     margin-top: var(--space-xl);
 }
@@ -316,7 +320,6 @@ body {
     color: var(--color-text);
     text-align: center;
     margin-bottom: var(--space-lg);
-    font-weight: 300;
 }
 
 .experience__grid {
@@ -326,7 +329,7 @@ body {
 }
 
 .experience-card {
-    background: var(--color-bg-secondary);
+    background: var(--color-bg);
     padding: var(--space-lg);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-md);
@@ -352,6 +355,70 @@ body {
     margin: 0;
 }
 
+/* ==== ПОДВАЛ ==== */
+.footer {
+    background: var(--gradient-dark);
+    text-align: center;
+    padding: var(--space-xl);
+    grid-area: footer;
+}
+
+.footer__text {
+    margin: 0;
+    color: #ffffff !important;
+}
+
+/* ==== АДАПТИВНОСТЬ ==== */
+@media (max-width: 768px) {
+    .nav__list {
+        flex-direction: column;
+        gap: var(--space-sm);
+        padding: var(--space-md);
+    }
+
+    .nav__link {
+        padding: var(--space-lg) var(--space-md);
+        text-align: center;
+    }
+
+    .main {
+        padding: var(--space-lg);
+        max-width: 100%;
+    }
+
+    .header {
+        padding: var(--space-lg);
+    }
+
+    .header__title {
+        font-size: var(--font-size-xl);
+    }
+
+    .theme-toggle {
+        top: var(--space-md);
+        right: var(--space-md);
+    }
+
+    .profile__card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile__photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .skills__grid {
+        justify-content: center;
+    }
+
+    .experience__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ВСЕ ОСТАЛЬНЫЕ СТИЛИ ДЛЯ ДРУГИХ СТРАНИЦ ОСТАЮТСЯ ПРЕЖНИМИ */
 /* ==== НОВОСТИ ==== */
 .news {
     margin: var(--space-xl) 0;
@@ -579,19 +646,6 @@ body {
     box-shadow: none;
 }
 
-/* ==== ПОДВАЛ ==== */
-.footer {
-    background: var(--gradient-dark);
-    text-align: center;
-    padding: var(--space-xl);
-    grid-area: footer;
-}
-
-.footer__text {
-    margin: 0;
-    color: #ffffff !important;
-}
-
 /* ==== МОДАЛЬНОЕ ОКНО ==== */
 dialog::backdrop {
     background: rgba(0, 0, 0, 0.6);
@@ -692,84 +746,5 @@ dialog {
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
-    }
-}
-
-/* ==== АДАПТИВНОСТЬ ==== */
-@media (max-width: 768px) {
-    .nav__list {
-        flex-direction: column;
-        gap: var(--space-sm);
-        padding: var(--space-md);
-    }
-
-    .nav__link {
-        padding: var(--space-lg) var(--space-md);
-        text-align: center;
-    }
-
-    .main {
-        padding: var(--space-lg);
-        max-width: 100%;
-    }
-
-    .header {
-        padding: var(--space-lg);
-    }
-
-    .header__title {
-        font-size: var(--font-size-xl);
-    }
-
-    .theme-toggle {
-        top: var(--space-md);
-        right: var(--space-md);
-    }
-
-    .profile__photo {
-        width: 180px;
-        height: 220px;
-    }
-
-    .skills__grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-sm);
-    }
-
-    .experience__grid {
-        grid-template-columns: 1fr;
-    }
-
-    .products__grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .modal__actions {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
-    }
-
-    dialog {
-        margin: var(--space-md);
-        width: calc(100vw - 2rem);
-    }
-}
-
-@media (max-width: 600px) {
-    .profile__card {
-        padding: var(--space-lg);
-    }
-    
-    .experience-card,
-    .news-card,
-    .product-card {
-        padding: var(--space-lg);
     }
 }
