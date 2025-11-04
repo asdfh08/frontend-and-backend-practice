@@ -621,7 +621,7 @@ dialog {
 
 .modal__title {
     margin: 0;
-    color: var(--color-text-inverse);
+    color: #ffffff !important;
     font-size: var(--font-size-xl);
 }
 
