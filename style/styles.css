@@ -59,14 +59,17 @@
 
 /* Темная тема */
 [data-theme="dark"] {
-    --color-text: #ecf0f1;
-    --color-text-light: #bdc3c7;
-    --color-bg: #2c3e50;
-    --color-bg-secondary: #34495e;
-    --color-bg-dark: #1a252f;
+    --color-text: #ecf0f1;              /* Светлый текст */
+    --color-text-light: #bdc3c7;        /* Серый текст */
+    --color-text-inverse: #2c3e50;      /* Темный текст для светлых элементов */
+    
+    --color-bg: #1a252f;                /* Темный фон */
+    --color-bg-secondary: #2c3e50;      /* Чуть светлее фон для карточек */
+    --color-bg-dark: #34495e;           /* Для навигации и т.д. */
+    --color-bg-darker: #2c3e50;         /* Самый темный */
+    
     --shadow-md: 0 5px 20px rgba(0,0,0,0.3);
 }
-
 /* ==== БАЗОВЫЕ СТИЛИ ==== */
 * {
     margin: 0;
