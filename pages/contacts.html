@@ -74,7 +74,7 @@
                     </article>
                 </div>
                 
-                <button class="btn btn--primary" onclick="contactModal.showModal()">
+                <button class="btn btn--primary" onclick="openModal()">
                     Связаться с нами
                 </button>
             </section>
@@ -136,8 +136,8 @@
                     </div>
                     
                     <div class="modal__actions">
-                        <!-- Кнопка отмены с автоматическим закрытием -->
-                        <button type="submit" class="btn btn--secondary">Отмена</button>
+                        <!-- Кнопка отмены с правильным типом и обработчиком -->
+                        <button type="button" class="btn btn--secondary" onclick="closeModal()">Отмена</button>
                         <!-- Кнопка отправки -->
                         <button type="button" class="btn btn--primary" onclick="submitForm()">Отправить</button>
                     </div>
@@ -156,6 +156,18 @@
             
             const themeToggle = document.querySelector('.theme-toggle');
             themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+        }
+
+        // Функция для открытия модального окна
+        function openModal() {
+            const modal = document.getElementById('contactModal');
+            modal.showModal();
+        }
+
+        // Функция для закрытия модального окна
+        function closeModal() {
+            const modal = document.getElementById('contactModal');
+            modal.close();
         }
 
         // Функция для отправки формы
@@ -185,7 +197,7 @@
             alert('Спасибо! Ваше обращение отправлено. Мы свяжемся с вами в ближайшее время.');
             
             // Закрываем модальное окно
-            contactModal.close();
+            closeModal();
             
             // Очищаем форму
             form.reset();
@@ -194,10 +206,17 @@
         // Закрытие модального окна по клику на фон
         document.getElementById('contactModal').addEventListener('click', function(event) {
             if (event.target === this) {
-                this.close();
+                closeModal();
             }
         });
         
+        // Обработка нажатия Escape для закрытия модального окна
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
         // Обработка отправки формы через Enter
         document.getElementById('feedbackForm').addEventListener('keypress', function(event) {
             if (event.key === 'Enter' && event.target.type !== 'textarea') {
