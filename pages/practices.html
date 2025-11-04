@@ -3,55 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Практики</title>
+    <title>Практики - Портфолио</title>
     <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
-    <div class="page-container">
+    <div class="page">
         <header class="header">
-            <h1>Практические работы</h1>
+            <h1 class="header__title">Практические работы</h1>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
         </header>
         
         <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="../index.html">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="news.html">Новости</a>
+                </li>
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link" href="practices.html">Практики</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="goods.html">Товары</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="contacts.html">Контакты</a>
+                </li>
             </ul>
         </nav>
         
-        <main class="content">
-            <section class="about-me">
-                <h2>Практические работы</h2>
-                <p>Здесь будут размещены все практические работы по курсу "Фронтенд и бэкенд разработка".</p>
+        <main class="main">
+            <section class="about">
+                <h2 class="about__title">Практические работы</h2>
+                <p class="about__text">
+                    Здесь будут размещены все практические работы по курсу "Фронтенд и бэкенд разработка". 
+                    Каждая работа демонстрирует освоение новых технологий и подходов к веб-разработке.
+                </p>
             </section>
             
-            <section class="experience-section">
-                <h2 class="section-title">Практические работы</h2>
-                <div class="experience-grid">
+            <section class="experience">
+                <h2 class="experience__title">Практические работы</h2>
+                <div class="experience__grid">
                     <article class="experience-card">
-                        <h3 class="experience-title">Основы HTML</h3>
-                        <p class="experience-desc">Создание базовой структуры сайта</p>
+                        <h3 class="experience-card__title">Основы HTML</h3>
+                        <p class="experience-card__desc">Создание базовой структуры сайта с использованием семантических тегов.</p>
                     </article>
                     
                     <article class="experience-card">
-                        <h3 class="experience-title">Формы и таблицы</h3>
-                        <p class="experience-desc">Работа с HTML-формами и таблицами</p>
+                        <h3 class="experience-card__title">Формы и таблицы</h3>
+                        <p class="experience-card__desc">Работа с HTML-формами, таблицами и элементами ввода данных.</p>
                     </article>
                     
                     <article class="experience-card">
-                        <h3 class="experience-title">CSS основы</h3>
-                        <p class="experience-desc">Стилизация веб-страниц</p>
+                        <h3 class="experience-card__title">CSS основы</h3>
+                        <p class="experience-card__desc">Стилизация веб-страниц с использованием современных подходов CSS.</p>
+                    </article>
+
+                    <article class="experience-card">
+                        <h3 class="experience-card__title">Flexbox и Grid</h3>
+                        <p class="experience-card__desc">Создание адаптивных макетов с помощью Flexbox и CSS Grid.</p>
+                    </article>
+
+                    <article class="experience-card">
+                        <h3 class="experience-card__title">Модальные окна</h3>
+                        <p class="experience-card__desc">Реализация интерактивных модальных окон и форм обратной связи.</p>
+                    </article>
+
+                    <article class="experience-card">
+                        <h3 class="experience-card__title">БЭМ методология</h3>
+                        <p class="experience-card__desc">Структурирование CSS кода по методологии БЭМ для масштабируемости.</p>
                     </article>
                 </div>
             </section>
         </main>
         
         <footer class="footer">
-            <p>© 2024 Конкина Е.А. Все права защищены.</p>
+            <p class="footer__text">© 2024 Конкина Е.А. Все права защищены.</p>
         </footer>
     </div>
+
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            const themeToggle = document.querySelector('.theme-toggle');
+            themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            const themeToggle = document.querySelector('.theme-toggle');
+            themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+        });
+    </script>
 </body>
 </html>

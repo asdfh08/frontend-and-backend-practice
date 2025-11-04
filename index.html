@@ -3,71 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Семестровая работа</title>
+    <title>Главная - Портфолио</title>
     <link rel="stylesheet" href="style/styles.css">
 </head>
 <body>
-    <div class="page-container">
+    <div class="page">
+        <!-- Шапка -->
         <header class="header">
-            <h1>Главная страница</h1>
+            <h1 class="header__title">Моё портфолио</h1>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
         </header>
         
+        <!-- Навигация -->
         <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
+            <ul class="nav__list">
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link" href="index.html">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/news.html">Новости</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/practices.html">Практики</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/goods.html">Товары</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/contacts.html">Контакты</a>
+                </li>
             </ul>
         </nav>
         
-        <main class="content">
-            <article class="profile-header">
-                <h1 class="profile-title">Информация об авторе</h1>
-                <img class="profile-photo" src="images/photo.jpg" alt="Фото автора">
-                <h2 class="profile-name">Конкина Екатерина Алексеевна</h2>
-                <p class="profile-group">ЭФБО-07-24</p>
-                <p class="profile-group">Дата рождения: 23.11.2006</p>
-            </article>
-
-            <section class="about-me">
-                <h2>Обо мне</h2>
-                <p>Я студентка, увлекаюсь программированием и веб-разработкой. Изучаю новые технологии и совершенствую свои навыки.</p>
-            </section>
-
-            <section class="skills-container">
-                <h2>Мои навыки</h2>
-                <div class="skills-grid">
-                    <div class="skill-tag">HTML</div>
-                    <div class="skill-tag">Python</div>
-                    <div class="skill-tag">JavaScript</div>
-                    <div class="skill-tag">Веб-дизайн</div>
+        <!-- Основной контент -->
+        <main class="main">
+            <!-- Профиль -->
+            <section class="profile">
+                <div class="profile__card">
+                    <img class="profile__photo" src="images/photo.jpg" alt="Фото автора">
+                    <h2 class="profile__name">Конкина Екатерина Алексеевна</h2>
+                    <p class="profile__group">ЭФБО-07-24</p>
+                    <p class="profile__group">Дата рождения: 23.11.2006</p>
                 </div>
             </section>
 
-            <section class="experience-section">
-                <h2 class="section-title">Мой опыт работы</h2>
-                <div class="experience-grid">
+            <!-- Обо мне -->
+            <section class="about">
+                <h2 class="about__title">Обо мне</h2>
+                <p class="about__text">
+                    Я студентка, увлекаюсь программированием и веб-разработкой. 
+                    Изучаю новые технологии и совершенствую свои навыки. 
+                    Люблю создавать красивые и функциональные веб-приложения.
+                </p>
+            </section>
+
+            <!-- Навыки -->
+            <section class="skills">
+                <h2 class="skills__title">Мои навыки</h2>
+                <div class="skills__grid">
+                    <div class="skill skill--html">
+                        <span class="skill__name">HTML</span>
+                    </div>
+                    <div class="skill skill--python">
+                        <span class="skill__name">Python</span>
+                    </div>
+                    <div class="skill skill--js">
+                        <span class="skill__name">JavaScript</span>
+                    </div>
+                    <div class="skill skill--design">
+                        <span class="skill__name">Веб-дизайн</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Опыт работы -->
+            <section class="experience">
+                <h2 class="experience__title">Мой опыт работы</h2>
+                <div class="experience__grid">
                     <article class="experience-card">
-                        <h3 class="experience-title">Разработка учебных проектов</h3>
-                        <p class="experience-desc">Создавала веб-страницы и приложения.</p>
+                        <h3 class="experience-card__title">Разработка учебных проектов</h3>
+                        <p class="experience-card__desc">Создавала веб-страницы и приложения для учебных целей.</p>
                     </article>
                     <article class="experience-card">
-                        <h3 class="experience-title">Изучение фронтенд технологий</h3>
-                        <p class="experience-desc">Осваивала современные технологии и инструменты.</p>
+                        <h3 class="experience-card__title">Изучение фронтенд технологий</h3>
+                        <p class="experience-card__desc">Осваивала современные технологии и инструменты веб-разработки.</p>
                     </article>
                     <article class="experience-card">
-                        <h3 class="experience-title">Изучение веб-дизайна</h3>
-                        <p class="experience-desc">Осваивала принципы UI/UX и современные цветотипы.</p>
+                        <h3 class="experience-card__title">Изучение веб-дизайна</h3>
+                        <p class="experience-card__desc">Осваивала принципы UI/UX и современные подходы к дизайну.</p>
                     </article>
                 </div>
             </section>
         </main>
         
+        <!-- Подвал -->
         <footer class="footer">
-            <p>© 2024 Конкина Е.А. Все права защищены.</p>
+            <p class="footer__text">© 2024 Конкина Е.А. Все права защищены.</p>
         </footer>
     </div>
+
+    <script>
+        // Функция переключения темы
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            
+            const themeToggle = document.querySelector('.theme-toggle');
+            themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+            
+            // Сохраняем выбор темы в localStorage
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // Загружаем сохраненную тему при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            
+            const themeToggle = document.querySelector('.theme-toggle');
+            themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+        });
+    </script>
 </body>
 </html>
