@@ -59,17 +59,25 @@
 
 /* Темная тема */
 [data-theme="dark"] {
-    --color-text: #ecf0f1;              /* Светлый текст */
-    --color-text-light: #bdc3c7;        /* Серый текст */
-    --color-text-inverse: #2c3e50;      /* Темный текст для светлых элементов */
+    --color-text: #ecf0f1;
+    --color-text-light: #bdc3c7;
+    --color-text-inverse: #2c3e50;
     
-    --color-bg: #1a252f;                /* Темный фон */
-    --color-bg-secondary: #2c3e50;      /* Чуть светлее фон для карточек */
-    --color-bg-dark: #34495e;           /* Для навигации и т.д. */
-    --color-bg-darker: #2c3e50;         /* Самый темный */
+    --color-bg: #1a252f;
+    --color-bg-secondary: #2c3e50;
+    --color-bg-dark: #34495e;
+    --color-bg-darker: #2c3e50;
     
-    --shadow-md: 0 5px 20px rgba(0,0,0,0.3);
+    --gradient-primary: linear-gradient(135deg, #7688e8 0%, #8560b0 100%);
+    --gradient-dark: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
+    --gradient-light: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    --gradient-accent: linear-gradient(135deg, #5fb0fe 0%, #00f2fe 100%);
+    
+    --shadow-sm: 0 2px 5px rgba(0,0,0,0.3);
+    --shadow-md: 0 5px 20px rgba(0,0,0,0.4);
+    --shadow-lg: 0 10px 30px rgba(0,0,0,0.5);
 }
+
 /* ==== БАЗОВЫЕ СТИЛИ ==== */
 * {
     margin: 0;
@@ -117,6 +125,7 @@ body {
     font-weight: 300;
     letter-spacing: 2px;
     margin: 0;
+    color: var(--color-text-inverse);
 }
 
 .theme-toggle {
@@ -189,6 +198,8 @@ body {
     max-width: 900px;
     margin: 0 auto;
     grid-area: main;
+    color: var(--color-text);
+    background: var(--color-bg);
 }
 
 /* ==== ПРОФИЛЬ ==== */
@@ -198,7 +209,7 @@ body {
 }
 
 .profile__card {
-    background: var(--color-bg);
+    background: var(--color-bg-secondary);
     padding: var(--space-xl);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-md);
@@ -230,7 +241,7 @@ body {
 
 /* ==== ОБО МНЕ ==== */
 .about {
-    background: var(--gradient-light);
+    background: var(--color-bg-secondary);
     padding: var(--space-lg);
     border-radius: var(--border-radius-lg);
     margin: var(--space-xl) 0;
@@ -247,6 +258,7 @@ body {
 .about__text {
     font-size: var(--font-size-base);
     line-height: 1.8;
+    color: var(--color-text);
 }
 
 /* ==== НАВЫКИ ==== */
@@ -287,8 +299,13 @@ body {
 
 .skill--html { background: var(--gradient-accent); }
 .skill--python { background: linear-gradient(135deg, #3776AB 0%, #FFD343 100%); }
-.skill--js { background: linear-gradient(135deg, #F7DF1E 0%, #000000 100%); color: #000; }
+.skill--js { background: linear-gradient(135deg, #F7DF1E 0%, #000000 100%); }
 .skill--design { background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%); }
+
+/* Исправление для JS навыка в темной теме */
+[data-theme="dark"] .skill--js {
+    color: var(--color-text-inverse) !important;
+}
 
 /* ==== ОПЫТ РАБОТЫ ==== */
 .experience {
@@ -310,7 +327,7 @@ body {
 }
 
 .experience-card {
-    background: var(--color-bg);
+    background: var(--color-bg-secondary);
     padding: var(--space-lg);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-md);
@@ -355,7 +372,7 @@ body {
 }
 
 .news-card {
-    background: var(--color-bg);
+    background: var(--color-bg-secondary);
     padding: var(--space-lg);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-md);
@@ -408,7 +425,7 @@ body {
 }
 
 .product-card {
-    background: var(--color-bg);
+    background: var(--color-bg-secondary);
     padding: var(--space-lg);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-md);
@@ -476,10 +493,11 @@ body {
 }
 
 .contact-info {
-    background: var(--gradient-light);
+    background: var(--color-bg-secondary);
     padding: var(--space-xl);
     border-radius: var(--border-radius-lg);
     margin-bottom: var(--space-lg);
+    color: var(--color-text);
 }
 
 .contact-grid {
@@ -490,7 +508,7 @@ body {
 }
 
 .contact-item {
-    background: var(--gradient-light);
+    background: var(--color-bg-secondary);
     padding: var(--space-lg);
     border-radius: var(--border-radius);
     text-align: center;
@@ -542,13 +560,14 @@ body {
 }
 
 .btn--secondary {
-    background: var(--color-bg-secondary);
+    background: var(--color-bg);
     color: var(--color-text);
-    border: 2px solid #e9ecef;
+    border: 2px solid var(--color-primary);
 }
 
 .btn--secondary:hover {
-    background: #e9ecef;
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
 }
 
 .btn--disabled {
@@ -572,6 +591,7 @@ body {
 
 .footer__text {
     margin: 0;
+    color: var(--color-text-inverse);
 }
 
 /* ==== МОДАЛЬНОЕ ОКНО ==== */
@@ -590,6 +610,7 @@ dialog {
     width: 90vw;
     max-height: 90vh;
     overflow-y: auto;
+    background: var(--color-bg);
 }
 
 .modal__header {
@@ -608,6 +629,8 @@ dialog {
 
 .modal__content {
     padding: var(--space-xl);
+    background: var(--color-bg);
+    color: var(--color-text);
 }
 
 .form__group {
@@ -626,11 +649,13 @@ dialog {
 .form__textarea {
     width: 100%;
     padding: var(--space-md);
-    border: 2px solid #e9ecef;
+    border: 2px solid var(--color-bg-dark);
     border-radius: var(--border-radius-sm);
     font-size: var(--font-size-base);
     transition: border-color var(--transition-normal);
     box-sizing: border-box;
+    background: var(--color-bg-secondary);
+    color: var(--color-text);
 }
 
 .form__input:focus,
