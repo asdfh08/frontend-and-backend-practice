@@ -194,11 +194,12 @@ body {
 /* ==== ОСНОВНОЙ КОНТЕНТ ==== */
 .main {
     padding: var(--space-xl);
-    max-width: 900px;
+    /* max-width: 900px; ← УДАЛЕНО */
     margin: 0 auto;
     grid-area: main;
     color: var(--color-text);
     background: var(--color-bg);
+    width: 100%; /* ← ДОБАВЛЕНО */
 }
 
 /* ==== ПРОФИЛЬ (СТИЛЬ ИЗ ПРИМЕРА №11) ==== */
